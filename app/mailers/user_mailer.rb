@@ -12,10 +12,10 @@ class UserMailer < ApplicationMailer
       mail(to: @user.email, subject: 'Bienvenue chez nous !') 
     end
 
-    def event_subscription(event_admin, event, user)
-        @event_admin = event_admin
-        @event = event
-        @user = user 
-        mail(to: @event_admin.email, subject: 'Un participant a votre evenement ') 
-    end
+    # def event_subscription(event_admin, event, user)
+    #     @event_admin = event_admin
+    #     @event = event
+    #     @user = user 
+    #     mail(to: @event_admin.email, subject: 'Un participant a votre evenement ') 
+    # end
 end
