@@ -33,10 +33,12 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Mon Profil</a>
             <ul class="dropdown-menu" aria-labelledby="dropdown01">
-              <li><a class="dropdown-item" href=<%= new_user_registration_path  %>>S'inscrire</a></li>
+              
               <%if user_signed_in?%>
+               <li><a class="dropdown-item" href=<%= user_path(current_user.id)  %>>Profil</a></li>
                <li> <a class="dropdown-item" <%= link_to "Se deconnecter", destroy_user_session_path, :method => :delete %>></a></li>
                  <%else%>
+               <li><a class="dropdown-item" href=<%= new_user_registration_path  %>>S'inscrire</a></li>
                <li><a class="dropdown-item" href=<%= new_user_session_path %>>Se connecter</a></li>
               <%end%>
             </ul>
@@ -53,3 +55,4 @@
     <%= yield %>
   </body>
 </html>
+

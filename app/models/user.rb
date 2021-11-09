@@ -4,7 +4,7 @@ class User < ApplicationRecord
   after_create :welcome_send 
    
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :confirmable
+         :recoverable, :rememberable, :validatable #:confirmable
     has_many :attendances
     has_many :events, through: :attendances
 

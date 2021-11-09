@@ -4,7 +4,7 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  # config.action_mailer.delivery_method = :letter_opener
+ 
   # config.action_mailer.perform_deliveries = true
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.cache_classes = false
@@ -40,8 +40,6 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -65,4 +63,18 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #config.action_mailer.delivery_method = :letter_opener
+  
+  
+  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
+  
+
+
+  #je mets en comm car j'intègre la gem devise 
+  config.action_mailer.delivery_method = :letter_opener
+  
+  
 end
